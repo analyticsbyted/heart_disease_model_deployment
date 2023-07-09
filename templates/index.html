@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart Disease Percent</title>
+</head>
+<body style="background: #000;">
+    <div class="login">
+        <h1 style="color: #fb3f3f;">Heart Disease Prediction</h1>
+        <form action="{{ url_for('predict') }}" method="post">
+            <input type="text" name="biking percent" placeholder="Type in biking percent" required="required" />
+            <br>
+            <input type="text" name="smoking percent" placeholder="Type in smoking percent" required="required" />
+            <p>
+            <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button></p>
+        </form>
+
+        <br>
+        <br>
+        <h4 style="color: #fb3f3f;">{{ prediction_text }}</h4>
+
+    </div>
+    
+</body>
+</html>
